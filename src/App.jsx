@@ -3,14 +3,14 @@ import React from 'react';
 const Styleheader = {
   background: 'Aquamarine',
   border: '1px solid black',
-  height: '7rem',
+  margin: '5px',
 }
 
 const StyleMain = {
   background: 'PaleTurquoise',
-  borderLeft: '1px solid black',
-  borderButton: '1px solid black',
-  borderRight: '1px solid black',
+  border: '1px solid black',
+  margin: '5px',
+  textAlign: 'center',
 }
 
 const StyleBtnAdd =  {
@@ -34,7 +34,11 @@ const Btn = () => {
   )
 }
 
-
+const TitleMain = () => {
+  return (
+  <h1>Listas Adicionadas</h1>
+  )
+}
 
 function App() {
   return (
@@ -45,7 +49,7 @@ function App() {
           </div>
         </header>
         <main style={StyleMain} id='mainList'>
-
+          <TitleMain />
         </main>
       </div>
   )
