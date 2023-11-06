@@ -4,7 +4,8 @@ const Styleheader = {
   background: 'Aquamarine',
   border: '1px solid black',
   margin: '5px',
-  borderRadius: '10px'
+  borderRadius: '10px',
+  padding: '5px'
 }
 
 const StyleMain = {
@@ -16,7 +17,7 @@ const StyleMain = {
 }
 
 const StyleBtnAdd =  {
-  margin: '10px',
+  margin: '5px',
   fontSize: '25px',
   padding: '5px',
   border: '1px solid black',
@@ -51,8 +52,8 @@ const AddList = () => {
 
 const Btn = () => {
   return (
-  <button style={StyleBtnAdd} id='btnadd' onClick={AddList}>Nova lista</button>
-  )
+    <button style={StyleBtnAdd} id='btnadd' onClick={AddList}>Nova lista</button>
+  )  
 }
 
 const TitleMain = () => {
@@ -61,14 +62,35 @@ const TitleMain = () => {
   )
 }
 
+const BtnOcult = () => {
+  const [EstateBtnOcultHeader, SetEstateBtnOcultHeader] = React.useState(true)
+
+  function EstateBtncActive(){
+    SetEstateBtnOcultHeader(!EstateBtnOcultHeader)
+  }
+  return (
+    <button id='BtnOcultHeader' onClick={EstateBtncActive}>{EstateBtnOcultHeader ? 'ᐃ' : 'ᐁ'}</button>
+  )
+
+}
+
+const HeaderList=()=>{
+  return (
+    <header style={Styleheader}>
+      <div>
+        <BtnOcult />
+      </div>
+      <div>
+        <Btn />
+      </div>
+    </header>
+  )
+}
+
 function App() {
   return (
       <div>
-        <header style={Styleheader}>
-          <div>
-            <Btn />
-          </div>
-        </header>
+        <HeaderList />
         <main style={StyleMain} id='mainList'>
           <TitleMain />
           <AddList />
