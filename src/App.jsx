@@ -4,6 +4,7 @@ const Styleheader = {
   background: 'Aquamarine',
   border: '1px solid black',
   margin: '5px',
+  borderRadius: '10px'
 }
 
 const StyleMain = {
@@ -11,6 +12,7 @@ const StyleMain = {
   border: '1px solid black',
   margin: '5px',
   textAlign: 'center',
+  borderRadius: '10px'
 }
 
 const StyleBtnAdd =  {
