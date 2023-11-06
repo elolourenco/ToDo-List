@@ -19,20 +19,39 @@ const StyleBtnAdd =  {
   margin: '10px',
   fontSize: '25px',
   padding: '5px',
-  background: 'LightCyan',
   border: '1px solid black',
   borderRadius: '10px',
 }
 
-const AddList = (event) => {
+const StylelistAddMain = {
+  background: 'blue',
+  width: '200px',
+  margin: '10px',
+  borderRadius: '5px',
+  paddingLeft: '7px',
+  paddingRight: '7px'
+}
+
+const StyleBtnList = {
+  margin:'5px'
+}
+
+const TitleList = {
+  margin: '0px'
+}
+
+const AddList = () => {
   return (
-    <h1></h1>
+    <div style={StylelistAddMain} id='listAddMain'>
+      <h2 style={TitleList}>Aqui consta uma nova lista</h2>
+      <button style={StyleBtnList}>ver lista</button>
+    </div>
   )
 }
 
 const Btn = () => {
   return (
-  <button style={StyleBtnAdd} id='btnadd' onClick={AddList}>Adicionar lista</button>
+  <button style={StyleBtnAdd} id='btnadd' onClick={AddList}>Nova lista</button>
   )
 }
 
@@ -52,6 +71,7 @@ function App() {
         </header>
         <main style={StyleMain} id='mainList'>
           <TitleMain />
+          <AddList />
         </main>
       </div>
   )
